@@ -403,5 +403,13 @@ a:hover{
 .hide{
     display: none;
 }
+.date-link{
+    cursor: pointer;
+    color: #b50404;
+}
+
+.date-link:hover{
+    text-decoration: underline;
+}
 
 

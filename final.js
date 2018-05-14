@@ -553,4 +553,22 @@
 
     });
 
+    d3.selectAll(".date-link").on("click", goToDate);
+
+    function goToDate() {
+        const date = d3.select(this);
+        const day = date.attr("data-day");
+        const month = date.attr("data-month");
+        const year = date.attr("data-year");
+        const newDate = new Date(currentDate);
+        newDate.setDate(day);
+        newDate.setMonth(month);
+        newDate.setFullYear(year);
+        if(formatDate(newDate) !== formatDate(currentDate)){
+            console.log("new");
+            currentDate = newDate;
+            loadNewReadings(currentDate, currentHour, sensorMappings);
+        }
+    }
+
 })();

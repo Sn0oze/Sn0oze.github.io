@@ -196,7 +196,7 @@
     cursor: pointer;
 }
 .modal{
-    top: 56px;
+    top: 64px;
 }
 
 .modal.modal-fullscreen .modal-dialog {

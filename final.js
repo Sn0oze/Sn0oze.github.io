@@ -90,7 +90,6 @@
                     default:
                         alert("error: " + status);
                 }
-
             }else{
                 sensorReadings = sensorReadingsByDay.thedata[0].sensors;
                 totalObservationsPerHour = calcHourlyTotal(sensorReadings);
@@ -230,7 +229,14 @@
         showLoadingOverlay();
         d3.json(proxyURL + sensorDataURL + formatDate(date), function (error, data) {
             if(error){
-                console.error(error);
+                const status = +error.currentTarget.status;
+                switch(status){
+                    case 429:
+                        alert("The server as reached the request limit. The limit will reset after 3 minutes");
+                        break;
+                    default:
+                        alert("error: " + status);
+                }
             }else{
                 sensorReadings = data.thedata[0].sensors;
                 totalObservationsPerHour = calcHourlyTotal(sensorReadings);

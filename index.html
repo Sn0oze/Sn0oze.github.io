@@ -46,10 +46,46 @@
 </div>
 <div class="container" style="padding-top: 64px">
     <h1 class="text-center">Melbourne's Pedestrian Sensor Network</h1>
-    <span class="date-link" data-day="11" data-month="04" data-year="2018">Try this day</span>
-    <span class="date-link" data-day="11" data-month="00" data-year="2018">Try this day other one</span>
+    <p>
+        We have looked into the pedestrian traffic in Melbourne and furthermore investigated if the weather has any impact on it.
+        During this investigation three datasets were used.
+        These datasets contains information gathered by multiple sensors throughout Melbourne.
+        In our findings we mostly focused on the number of pedestrians and the temperature.
+
+    </p>
+    <p>
+        We encourage to play around with our map to discover behaviour of the people in Melbourne.
+    </p>
+    <p>
+        Here are some of the noteworthy days:
+        <ul class="link-list">
+            <li>Most rainfall: <span class="date-link" data-day="06" data-month="01" data-year="2017">06/02/2017</span>, 38.4 mm/m&sup2;</li>
+            <li>Highest temperatures:  <span class="date-link" data-day="17" data-month="00" data-year="2014">17/01/2014</span>, 43.9 &deg;C</li>
+            <li>Lowest temperature: <span class="date-link" data-day="14" data-month="06" data-year="2015">14/7/2015</span>, 9.5 &deg;C (Lowest highest temperature)</li>
+            <li>Most pedestrians:  <span class="date-link" data-day="14" data-month="10" data-year="2016">14/11/2016</span>, 1427646 total observations</li>
+            <li>Fewest pedestrians:  <span class="date-link" data-day="25" data-month="11" data-year="2010">25/12/2010</span>, 109545 total observations</li>
+        </ul>
+    </p>
+    <p>
+        More notable dates can be found in #########jupytor book#########
+    </p>
+    <p>
+        The <span class="date-link" data-day="17" data-month="00" data-year="2014">17/01/2014</span>
+        <a href="http://www.abc.net.au/pm/content/2013/s3927578.htm" target="_blank">was part of the greatest heatwave in 100 years</a>.
+        Four consecutive days had more than 40 degrees during the day and above 25 degrees during the night.
+        If we lookup the date and look at the sensor graph for any given sensor, the hourly total is mostly lower than the average 4 weeks average throughout the whole day.
+        For this particular date it seems like the weather influenced the people to more likely stay indoors.
+    </p>
+    <p>
+        It is no surprise that the day with fewest pedestrians is Christmas day (<span class="date-link" data-day="25" data-month="11" data-year="2010">25/12/2010</span>).
+        Christmas day seems to generally have a low number of pedestrians.
+        Another example to this is the 2012-12-25 with 133751 registered pedestrians, making it the 5'th lowest registered number.
+    </p>
+    <p>
+        Wednesday the <span class="date-link" data-day="06" data-month="01" data-year="2017">06/02/2017</span> was a very wet day. One of the other cities in south Australia
+        <a href="https://www.aljazeera.com/news/2017/02/severe-storms-drench-southern-australia-170206093254226.html" target="_blank">(Adelaide) received a whole month of rain over course of one day</a>.
+    </p>
 </div>
-<div style="min-height: 300px"></div>
 <div class="container-fluid position-relative">
     <div class="overlay loading hide" id="loadingOverlay">
         <div class="overlay-item">
@@ -149,6 +185,34 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container">
+    <H2>
+        Summary of the Data Analysis
+    </H2>
+    <p>
+        We have segmented the number of pedestrian into different time periods.
+        Based on our segmentations it is clear that people are more likely to walk outside within the spring period.
+        During this period 24 days have more than 1.000.000 registered pedestrians.
+        This is the only season that has more than 900.000 pedestrian registered on a single day.
+    </p>
+    <p>
+        We did some calculations to determine when the weather has the biggest impact on the registered pedestrians.
+        We assume that people are influenced if there is a correlation between the number of people registered and the temperature in the given period.
+        Our findings shows that during a week Sunday is the day where people are influenced the most by the weather, followed  by Monday.
+        The Sunday was expected as people has to get to work regardless of the weather from Monday to Friday.
+        Monday however comes as a surprise.
+        Furthermore Autumn is the primary season where people take the weather in to consideration when moving outside.
+    </p>
+    <p>
+        One problem with the current approach we have chosen is that some of the sensors are clustered.
+        Areas with more sensors will of cause have more registrations than areas with lower number of sensors if an equal pedestrian density were to walk around. However the major issue with clustering sensors is that the same person are more likely to visit multiple sensors and thus increasing the numbers even more.
+
+    </p>
+    <p>
+        In the end the highest influential factor regarding pedestrian traffic is work. A lot of people work in the central Melbourne area, which require people from outside the area to move back and forth. People arrives at 8 am, have a break at 12-13 pm and then leaves at 5 pm. This pattern is easiest seen in the outer parts of central Melbourne.
+        Our data analysis showed that the weather has some impact when it's in the extremes but it's no way near the influence of work.
+    </p>
 </div>
 
 <!--Download Links Modal -->

@@ -565,7 +565,6 @@
         newDate.setMonth(month);
         newDate.setFullYear(year);
         if(formatDate(newDate) !== formatDate(currentDate)){
-            console.log("new");
             currentDate = newDate;
             loadNewReadings(currentDate, currentHour, sensorMappings);
         }

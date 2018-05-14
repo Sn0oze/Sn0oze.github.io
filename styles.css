@@ -388,4 +388,15 @@ input:checked + .toggle-slider:before {
 }
 /*End toggle switch*/
 
+.link-list{
+    list-style-type: none;
+}
+
+a{
+    color: #b50404;
+}
+a:hover{
+    color: #b50404;
+}
+
 

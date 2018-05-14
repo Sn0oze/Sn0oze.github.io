@@ -393,6 +393,14 @@ input:checked + .toggle-slider:before {
     list-style-type: none;
 }
 
+.link-list.downloads{
+    padding-left: 0;
+}
+
+ul.link-list.downloads li{
+    margin: 0.5rem 0;
+}
+
 a{
     color: #b50404;
 }

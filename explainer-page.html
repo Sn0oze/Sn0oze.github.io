@@ -43,16 +43,19 @@
         that a <a href="https://en.wikipedia.org/wiki/Proxy_server" target="_blank"> proxy server</a> had to be created
         in order to access the data from a different domain.
     </p>
-    <p>
+    <div>
         Secondly, the data about each sensor’s location, name, description and the day it was installed is stored in a
         separate dataset with a unique id used to map between the sensors locations and observations datasets.
-    </p>
-    <p>
+    </div>
+    <div>
         However, the API does not use the sensor id to map to the sensor locations dataset, but instead the sensor’s
         name. The names are also unique, but not consistent with all names in the locations dataset. In order to be able
         to map all observations provided by the API to a sensor location, a dictionary that maps between sensor ids and
         multiple names had to be created manually.
-    </p>
+    </div>
+    <div>
+        The detection of umapped sensors has its difficulties which means, that it is not guaranteed that all name mismatches have been found.
+    </div>
     <p>
         While the API is used to provide for the visualisation, the dataset with all sensor observations was still used
         for data analysis.

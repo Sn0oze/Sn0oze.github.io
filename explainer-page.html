@@ -8,26 +8,123 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-    <div class="container mt-3">
-        <h1 class="modal-title">Explainer Page</h1>
-        <h2>Motivation</h2>
-        <p>
-            While looking for potential datasets for this project, the search was heavily influenced by the play animation of Assignment 2, that animated the locations of murders in NYC over time.
-            This directed the focus, during the search for interesting datasets, towards those containing geo locations and timestamps, in order to create a similar style of animation.
-            The central dataset, that was settled on, is based on a network of pedestrian sensors in the city on Melbourne.
-            The dataset contains the amount of hourly registrations for each sensor and was chosen because it provides a solid foundation for an interesting map based visualization, the idea of exploring the driving forces behind pedestrian movement in a major city seemed interesting and multiple other datasets and statistics about Melbourne's population, weather and employment exist, that could be used to supplement the main dataset in order to create an narrative.
-            The focus for the user’s experience was to provide a highly interactive visualisation that provides an overview of the daily pedestrian movement as well each sensors registrations.
-        </p>
-        <h2>Basic Stats</h2>
-        <p></p>
-        <h2>Genre</h2>
-        <p></p>
-        <h2>Visualisations</h2>
-        <p></p>
-        <h2>Discussion</h2>
-        <p></p>
-        <h2>Contributions</h2>
-        <p></p>
+<div class="container mt-3">
+    <h1 class="text-center">Melbourne's Pedestrian Sensor Network Explainer Page</h1>
+    <h2>Motivation</h2>
+    <p>
+        While looking for potential datasets for this project, the search was heavily influenced by the play animation
+        of Assignment 2, that animated the locations of murders in NYC over time.
+        This directed the focus, during the search for interesting datasets, towards those containing geo locations and
+        timestamps, in order to create a similar style of animation.
+        The central dataset, that was settled on, is based on a network of pedestrian sensors in the city on Melbourne.
+        The dataset contains the amount of hourly registrations for each sensor and was chosen because it provides a
+        solid foundation for an interesting map based visualization, the idea of exploring the driving forces behind
+        pedestrian movement in a major city seemed interesting and multiple other datasets and statistics about
+        Melbourne's population, weather and employment exist, that could be used to supplement the main dataset in order
+        to create an narrative.
+        The focus for the user’s experience was to provide a highly interactive visualisation that provides an overview
+        of the daily pedestrian movement as well each sensors registrations.
+    </p>
+    <h2>Basic Stats</h2>
+    <p>
+        The main dataset contains about 2.21 million rows and is with a filesize of 166 MB far too large to use without
+        preprocessing. The raw dataset contains redundant information about the date of each observation, but even after
+        removing those attributes, the file remains too large. Storing each observation in a list would also come with
+        huge performance problems when trying to find all observations of a specific day and further a specific sensors
+        observations for that day.
+        To avoid this problem, the observations need to be grouped by day and further by sensor before using the data in
+        the browser. However, this would not solve the problem regarding the size of the file.
+    </p>
+    <p>
+        Fortunately a publicly available API provides all observations by day. Using the API, the data can be broken
+        down into manageable pieces, but also introduces a new set of problems.
+        Firstly, the API does not allow Cross Origin Resource Sharing (<a
+            href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">CORS</a>) , which means,
+        that a <a href="https://en.wikipedia.org/wiki/Proxy_server" target="_blank"> proxy server</a> had to be created
+        in order to access the data from a different domain.
+    </p>
+    <p>
+        Secondly, the data about each sensor’s location, name, description and the day it was installed is stored in a
+        separate dataset with a unique id used to map between the sensors locations and observations datasets.
+    </p>
+    <p>
+        However, the API does not use the sensor id to map to the sensor locations dataset, but instead the sensor’s
+        name. The names are also unique, but not consistent with all names in the locations dataset. In order to be able
+        to map all observations provided by the API to a sensor location, a dictionary that maps between sensor ids and
+        multiple names had to be created manually.
+    </p>
+    <p>
+        While the API is used to provide for the visualisation, the dataset with all sensor observations was still used
+        for data analysis.
+        As mentioned earlier, some other datasets where used apart from the sensor observations and locations.
+    </p>
+    <p>
+        Some statistics about Melbourne's population and employment per suburb where manually compiled from various
+        different government sources.
+        A geojson file is used to display a map of melbourne’s suburbs. After it became apparent, that the sensor
+        network only spans close to the city’s center, the geojson was filtered to only contain the relevant suburbs.
+    </p>
+    <p>
+        An additional two other data sets has been used. The first one contains information on rainfall in Melbourne. It
+        consists of 19549 rows with a filesize of 722 KB.
+        We wanted to match all days in the pedestrian dataset, to be able to lookup the rainfall amount for any
+        particular day. The relevant data was added to a dictionary and sorted by rainfall amount. This allowed us to
+        easily lookup dates with heavy rain to further investigate if it had impacted the pedestrian traffic.
+    </p>
+    <p>
+        The second additional dataset consists of temperature measurements from Essendon Airport VIC. it contains 28967
+        rows with a filesize of 1.1 MB. As with the rainfall dataset we only wanted the days that were in pedestrian
+        dataset (to make comparisons).
+        The date and temperature were added to a dictionary which enabled us to calculate the correlation between the
+        temperature and number of pedestrians within a certain timeframe.
+        Also we were able to create scatterplots to see if any clusters or patterns showed up.
+        One example is the scatterplots of the temperature vs number of pedestrians in each season.
+        This showed us that most of the high volume of pedestrians were located in the spring.
+    </p>
+    <div>
+        <img src="spring.png" width="100%">
     </div>
+    <p>
+        We sorted the temperature data into weekdays to further study the correlation of the weather and pedestrian
+        traffic in a more specific time frame.
+    </p>
+    <h2>Genre</h2>
+    <p></p>
+    <h2>Visualisations</h2>
+    <p></p>
+    <h2>Discussion</h2>
+    <p></p>
+    <h2>Contributions</h2>
+    <div style="min-height: 300px">
+        <p>
+            <a class="toggle-text-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Only click if you are Sune, or one of his TA's
+            </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div>Yejin Kim's main responsibilities
+                <ul>
+                    <li>Video</li>
+                </ul>
+            </div>
+            <div>Jacob Bundgaard Knudsen's main responsibilities
+                <ul>
+                    <li>Data Exploration and Analysis
+                    </li>
+                    <li>Narrative</li>
+                </ul>
+            </div>
+            <div>Jan-Eric Raab's main responsibilities
+                <ul>
+                    <li>Visualisation and Website</li>
+                    <li>Explainer Page</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="lib/jquery-3.3.1.slim.min.js"></script>
+<script src="lib/popper.min.js"></script>
+<script src="lib/bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -126,7 +126,7 @@
                 d3.select("#mapToggle").on("change", onMapToggle);
 
                 // remove loading overlay after everything is initialized
-                d3.select("body").classed("overflow-hidden", false).select(".overlay").remove();
+                d3.select("body").classed("overflow-hidden", false).select("#page-overlay").remove();
             }
         });
 
@@ -281,14 +281,11 @@
     }
 
     function showLoadingOverlay() {
-        d3.select("body")
-            .append("div").attr("class", "overlay loading").attr("id", "loadingOverlay")
-                .append("div").attr("class", "overlay-item")
-                    .append("span").attr("class", "spinner")
+        d3.select("#loadingOverlay").classed("hide", false);
     }
 
     function hideLoadingOverlay() {
-        d3.select("#loadingOverlay").remove();
+        d3.select("#loadingOverlay").classed("hide", true);
     }
 
     function setHourInput(time) {

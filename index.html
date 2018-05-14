@@ -43,14 +43,19 @@
         </ul>
     </div>
 </nav>
-<div class="overlay">
+<div class="overlay" id="page-overlay">
     <div class="overlay-item">
         <h1 class="no-user-select">Preparing Visualisations</h1>
         <span class="spinner"></span>
     </div>
 </div>
 <div style="min-height: 300px"></div>
-<div class="container-fluid" style="padding-top: 56px">
+<div class="container-fluid position-relative">
+    <div class="overlay loading hide" id="loadingOverlay">
+        <div class="overlay-item">
+            <span class="spinner"></span>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-8 col-md-6 text-center">
             <div id="mapContainer" class="position-relative">
@@ -145,6 +150,7 @@
         </div>
     </div>
 </div>
+<div style="min-height: 300px"></div>
 <!--Narrative Modal -->
 <div class="modal modal-fullscreen" id="mainContentModal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="mainContentModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

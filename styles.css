@@ -109,6 +109,7 @@
 }
 .overlay.loading{
     background-color: rgba(10,10,10,0.25);
+    position: absolute;
 }
 .overlay *{
     color: #f3f3f3;
@@ -397,6 +398,10 @@ a{
 }
 a:hover{
     color: #b50404;
+}
+
+.hide{
+    display: none;
 }
 
 

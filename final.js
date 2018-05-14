@@ -166,12 +166,12 @@
     }
 
     function onSuburbSelect(d){
-        let text = d.properties.name + ", id: " +
-            d.properties.cartodb_id;
+        let text = d.properties.name;
         let suburb = populationDict[d.properties.cartodb_id];
         if(suburb){
             text +=  ", total population: " + suburb.total +
-                ", " + ((suburb.total/totalPopulationCount)*100).toFixed(2) + "%"
+                ", " + ((suburb.total/totalPopulationCount)*100).toFixed(2) + "%" +
+                " population within the visible area"
         } else{
             text += ", total population: no data"
         }

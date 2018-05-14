@@ -89,11 +89,110 @@
         traffic in a more specific time frame.
     </p>
     <h2>Genre</h2>
-    <p></p>
+    <p>
+        We have created a magazine style as we have interactive visualization that is within a single frame embedded with text.
+    </p>
+    <p>
+        For our visual narrative we have the following elements:
+    </p>
+    <div>
+        <ul>
+            <li>
+                Visual Structuring
+                <ul>
+                    <li>Consistent visual platform</li>
+                    <li>Timebar</li>
+                </ul>
+            </li>
+            <li>
+                Highlighting
+                <ul>
+                    <li>Feature distinction</li>
+                    <li>Motion</li>
+                </ul>
+            </li>
+            <li>
+                Transition Guidance
+                <ul>
+                    <li>Familiar Objects</li>
+                    <li>Animated transitions</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p>
+        We have used a consistent visual platform as it makes the most sense to us when we are using a one-pager where we wants to keep it organized. As the user has to potentially navigate through nine years of data, we saw it as an obvious choice to implement a timebar / calendar to help the user navigate. We use feature distinction to both highlight different areas as well as sensors on the map. Furthermore the user is able to highlight the different graphs by hovering the corresponding legend. All of this is done to make it easier for the user to understand and interact with the visualization, as we don't provide major guidance. Our animated transitions is used to show a distinction when comparing the data.
+    </p>
+    <p>
+        For the narrative Structure we use:
+    </p>
+    <div>
+        <ul>
+            <li>
+                Ordering
+                <ul>
+                    <li>User Directed Path</li>
+                </ul>
+            </li>
+            <li>
+                Interactivity
+                <ul>
+                    <li>Hover Highlighting / Details</li>
+                    <li>Filtering / Selection / Search</li>
+                    <li>Navigation Buttons</li>
+                </ul>
+            </li>
+            <li>
+                Messaging
+                <ul>
+                    <li>Captions / Headlines</li>
+                    <li>Accompanying Article</li>
+                    <li>Introductory</li>
+                    <li>Summary / Synthesis</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <p>
+        Our narrative uses a user directed path as we like to give the user the option to discover patterns and make observations on their own. To help the user navigate we use filtering, selection and search. As mentioned in the earlier section the user can use the calendar which uses these features to easier get to a specific date or read data from a certain sensor. Accompanying articles are included in our narrative to reference our statements but also to give the user a chance to read further into the story. We have added both introductory and summary to make it fast and easy to understand our findings during this project.
+    </p>
     <h2>Visualisations</h2>
-    <p></p>
+    <p>
+        Two different kinds of visualisations where chosen for this project: a map and a line chart.
+        A map of Melbourne is the central visualisation and displays each of the sensors location as well as the sensor’s hourly pedestrian volume as a percentage of the total hourly volume across all sensors. This provides a good overview of the busiest parts of the city especially when playing the animation for the whole day.
+    </p>
+    <p>
+        The map can also be turned into a choropleth, which provides a better understanding the population's distribution across Melbourne’s suburbs.
+        The interface also lets the user chose to view a certain day, or to go through the day back and forth one day at a time, giving users an opportunity to dive deep into the data themselves.
+        When a sensor is selected on the map the line chart shows the sensors hourly volume across the whole day, as well as each hours average volume for the past 4 and 52 weeks.
+        Showing the sensors current counts together with the two averages gives an good indication if the current day is deviating from the long term trends.
+
+    </p>
+    <p>
+        The two visualisations provide a good overview of the daily pedestrian traffic, but they do not tell much of a story by themselves, which will be further discussed in the next section.
+    </p>
     <h2>Discussion</h2>
-    <p></p>
+    <p>
+        Overall the final product achieves the level of interactivity, that was envisioned in the beginning of this project and is actually fun to mess around with.
+        The visualisation’s overall quality is on a satisfactory level and despite the quite large dataset, it’s possible to explore the full dataset.
+    </p>
+    <p>
+        How ever, there is a disconnect in the visualisation between the macroscopic and microscopic level. When the datasets were analysed, it was mostly done by comparing the total daily observations to understand the magnitude and scale of the data, but there aren’t any visualisations that communicate those findings to the user.
+    </p>
+    <p>
+        The visualisations can still illustrate some the driving forces behind the pedestrian volume, like population and time, but that is most likely not enough going to catch users and motivate them to dive deep into the dataset themselves, despite interactivity being a big focus.
+        Instead using a martini glass approach, it feels more like we spilled the drink all over the customers and hope that they’ll enjoy it.
+    </p>
+    <p>
+        It is also debatable if an article style visualisation is the right approach for this project.
+        There is a strong case to be made, that an interactive slide show would be a better approach.
+        Splitting the visualisation up into slides would help creating a more thorough visualisation, that allows to look at the data from both a large, general angle as well as a small, detailed angle and understand the connection between them while avoiding visual cluttering and information overload.
+        In order to implement this though, a lot more data analysis and preparation would need to be done
+    </p>
+    <p>
+        The data analysis is another area that could be improved. There is too much use of absolute values during the analysis. This is problematic because the number of sensors has increased over the years which very likely will cause an increase in observations just by itself.
+        Using more sophisticated, statistical methods would probably help to reveal more details about the data and also give more weight to the findings.
+    </p>
     <h2>Contributions</h2>
     <div style="min-height: 300px">
         <p>

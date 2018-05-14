@@ -49,63 +49,67 @@
         <span class="spinner"></span>
     </div>
 </div>
-<div class="ui-widget">
-    <div class="d-flex align-content-center">
-        <input id="selectedDate" class="mr-auto datepicker-input" data-toggle="datepicker" readonly>
-        <div class="mr-1">
-            <button id="calendarPopover" class="icon-btn">
-                <i class="far fa-calendar-alt"></i>
-            </button>
-        </div>
-        <span id="backBtn" class="pointer">&lt;</span>&nbsp;<span id="nextBtn" class="pointer">&gt;</span>
-    </div>
-    <div><span id="selectedHour">None</span></div>
-    <div class="d-flex align-items-center mt-2">
-        <div class="play pointer mr-2" id="animationBtn"></div>
-        <input class="slider flex-grow-1" id="hourInput" type="range" min="0" max="23" step="1">
-    </div>
-    <button class="icon-btn collapse-toggle px-0 collapsed" type="button" data-toggle="collapse" data-target="#widgetCollapse" aria-expanded="false" aria-controls="widgetCollapse">
-        show
-    </button>
-    <div class="collapse" id="widgetCollapse">
-        <div class="d-flex align-items-center">
-            <svg width="24px" height="24px">
-                <circle r="5" cx="12" cy="12" class="sensor-legend"></circle>
-            </svg>
-            <span>Operative Sensor</span>
-        </div>
-        <div class="d-flex align-items-center">
-            <svg width="24px" height="24px">
-                <circle r="5" cx="12" cy="12" class="no-reading-legend"></circle>
-            </svg>
-            <span>Sensor, inactive this hour</span>
-        </div>
-        <div class="d-flex align-items-center">
-            <svg width="24px" height="24px">
-                <circle r="5" cx="12" cy="12" class="inactive-legend"></circle>
-            </svg>
-            <span>Sensor, inactive this day</span>
-        </div>
-        <div class="d-flex align-items-center">
-            <svg width="24px" height="24px">
-                <circle r="10" cx="12" cy="12" class="volume-legend"></circle>
-                <circle r="2" cx="12" cy="12" class="sensor-legend"></circle>
-            </svg>
-            <span>Sensor volume in relation to the hourly total</span>
-        </div>
-        <div class="d-flex align-items-center">
-            <span class="switch-label">Show choropleth</span>
-            <label class="switch">
-                <input type="checkbox" id="mapToggle">
-                <span class="toggle-slider round"></span>
-            </label>
-        </div>
-    </div>
-</div>
+<div style="min-height: 300px"></div>
 <div class="container-fluid" style="padding-top: 56px">
     <div class="row">
         <div class="col-lg-8 col-md-6 text-center">
-            <div id="mapContainer"></div>
+            <div id="mapContainer" class="position-relative">
+                <div class="ui-widget position-absolute">
+                    <div class="d-flex align-content-center">
+                        <input id="selectedDate" class="mr-auto datepicker-input" data-toggle="datepicker" readonly>
+                        <div class="mr-1">
+                            <button id="calendarPopover" class="icon-btn">
+                                <i class="far fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <span id="backBtn" class="pointer">&lt;</span>&nbsp;<span id="nextBtn" class="pointer">&gt;</span>
+                    </div>
+                    <div class="text-left"><span id="selectedHour">None</span></div>
+                    <div class="d-flex align-items-center mt-2">
+                        <div class="play pointer mr-2" id="animationBtn"></div>
+                        <input class="slider flex-grow-1" id="hourInput" type="range" min="0" max="23" step="1">
+                    </div>
+                    <div class="text-left">
+                        <button class="icon-btn collapse-toggle px-0 collapsed text-left" type="button" data-toggle="collapse" data-target="#widgetCollapse" aria-expanded="false" aria-controls="widgetCollapse">
+                            show
+                        </button>
+                    </div>
+                    <div class="collapse" id="widgetCollapse">
+                        <div class="d-flex align-items-center">
+                            <svg width="24px" height="24px">
+                                <circle r="5" cx="12" cy="12" class="sensor-legend"></circle>
+                            </svg>
+                            <span>Operative Sensor</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <svg width="24px" height="24px">
+                                <circle r="5" cx="12" cy="12" class="no-reading-legend"></circle>
+                            </svg>
+                            <span>Sensor, inactive this hour</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <svg width="24px" height="24px">
+                                <circle r="5" cx="12" cy="12" class="inactive-legend"></circle>
+                            </svg>
+                            <span>Sensor, inactive this day</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <svg width="24px" height="24px">
+                                <circle r="10" cx="12" cy="12" class="volume-legend"></circle>
+                                <circle r="2" cx="12" cy="12" class="sensor-legend"></circle>
+                            </svg>
+                            <span>Sensor volume in relation to the hourly total</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="switch-label">Show choropleth</span>
+                            <label class="switch">
+                                <input type="checkbox" id="mapToggle">
+                                <span class="toggle-slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-4 col-md-6">
             <h4 class="mt-2">Suburb</h4>

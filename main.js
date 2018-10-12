@@ -6,8 +6,8 @@
 })();
 
 function select(event) {
-    let isActive = event.target.classList.contains("active");
+    /*let isActive = event.target.classList.contains("active");
     if(!isActive){
         #event.target.addClass("active");
-    }
+    }*/
 }

@@ -4,8 +4,8 @@
 
 .portfolio-card {
     background: black;
-    min-height: 250px;
-    margin: 0 20px;
+    width: 100%;
+    min-height: 33vh;
     transition: all 200ms ease;
     cursor: pointer;
     opacity: 0.75;
@@ -17,6 +17,22 @@
 
 .portfolio-card:hover{
     transform: scale(1.1);
+}
+
+.portfolio-card > img{
+    max-height: 50%;
+    max-width: 50%;
+    opacity: 0.5;
+}
+
+.portfolio-card > h2{
+    color: white;
+    font-family: "Trebuchet MS";
+    opacity: 0.8;
+}
+
+a:hover{
+    text-decoration: none;
 }
 
 body {

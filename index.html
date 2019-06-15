@@ -2,44 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Portfolio</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="lib/bootstrap-4.1.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lib/animate.css">
 </head>
 <body>
-<div id="particles-js" class="dark"></div>
-<h1 class="fixed-title text-center">D3 Visualisations</h1>
-<div class="menu">
-    <div class="container-fluid">
+<div id="particles-js"></div>
+    <h1 class="title px-lg-5 px-md-5 sticky-top animated bounceInDown fastest" id="header"><img class="ml-2" alt="logo" src="assets/logo-red.png">
+        Portfolio
+        <span class="ml-auto mr-2">
+                    <a target="_blank" href="https://www.linkedin.com/in/jan-eric-raab-77573367/"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/Sn0oze"><i class="fab fa-github"></i></a>
+                </span>
+    </h1>
+    <div class="container-fluid" id="wrapper">
         <div class="row align-items-center px-5">
-            <div class="col mx-3">
-                <a href="https://sn0oze.github.io/Boston-Marathon/" target="_blank">
-                    <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
-                        <h2>Boston Marathon</h2>
-                        <img src="assets/BostonMarathon.png">
-                    </div>
-                </a>
-            </div>
-            <div class="col mx-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 my-3 fadeIn animated fastest">
                 <a href="https://sn0oze.github.io/NYC-Crimes/" target="_blank">
                     <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
-                        <h2>Murder in NYC</h2>
-                        <img src="assets/NYCMap.png">
+                        <h2 class="text-center">Murder in NYC</h2>
+                        <img alt="murder" src="assets/NYCMap.png">
                     </div>
                 </a>
             </div>
-            <div class="col mx-3">
+            <div class="col-lg-4 col-md-6  col-sm-12 my-3 fadeIn animated fastest delay-1">
                 <a href="https://sn0oze.github.io/Melbourne-Pedestrian-Sensors/" target="_blank">
                     <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
-                        <h2>Melbourne Pedestrian Sensors</h2>
-                        <img src="assets/MelbourneMap.png">
+                        <h2 class="text-center">Melbourne Pedestrian Sensors</h2>
+                        <img alt="sensors" src="assets/MelbourneMap.png">
                     </div>
                 </a>
             </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 my-3 fadeIn animated fastest delay-2">
+                <a href="https://sn0oze.github.io/Boston-Marathon/" target="_blank">
+                    <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
+                        <h2 class="text-center">Boston Marathon</h2>
+                        <img alt="marathon" src="assets/BostonMarathon.png">
+                    </div>
+                </a>
+            </div>
+            <!--<div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                <a href="https://sn0oze.github.io/Boston-Marathon/" target="_blank">
+                    <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
+                        <h2 class="text-center">Boston Marathon</h2>
+                        <img alt="marathon" src="assets/BostonMarathon.png">
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+                <a href="https://sn0oze.github.io/NYC-Crimes/" target="_blank">
+                    <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
+                        <h2 class="text-center">Murder in NYC</h2>
+                        <img alt="murder" src="assets/NYCMap.png">
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6  col-sm-12 my-3">
+                <a href="https://sn0oze.github.io/Melbourne-Pedestrian-Sensors/" target="_blank">
+                    <div class="portfolio-card d-flex flex-column align-items-center justify-content-center py-2">
+                        <h2 class="text-center">Melbourne Pedestrian Sensors</h2>
+                        <img alt="sensors" src="assets/MelbourneMap.png">
+                    </div>
+                </a>
+            </div>-->
         </div>
+        <p class="footer px-lg-5 px-md-5 animated bounceInRight fastest delayed">Jan-Eric Raab</p>
     </div>
 </div>
+<script src="https://kit.fontawesome.com/8b5fe6e73f.js"></script>
 <script type="text/javascript" src="lib/particles.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </body>
